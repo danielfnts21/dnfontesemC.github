@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main() {
+    int numElementos;
+    
+   
+    printf("Digite o numero de elementos do vetor: ");
+    scanf("%d", &numElementos);
+    
+  
+    int vetor[numElementos];
+    
+   
+    printf("Digite os elementos do vetor:\n");
+    for (int i = 0; i < numElementos; i++) {
+        scanf("%d", &vetor[i]);
+    }
+    
+   
+    int pares = 0, impares = 0;
+    
+  
+    for (int i = 0; i < numElementos; i++) {
+        if (vetor[i] % 2 == 0) {
+           
+            pares++;
+        } else {
+            
+            impares++;
+        }
+    }
+    
+  
+    printf("Quantidade de elementos pares: %d\n", pares);
+    printf("Quantidade de elementos impares: %d\n", impares);
+    
+    return 0;
+}
