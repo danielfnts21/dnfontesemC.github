@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int numeros[10];
+    int valorReferencia, vezesValorReferencia = 0;
+
+ 
+    printf("Digite 10 numeros inteiros:\n");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &numeros[i]);
+    }
+
+  
+    printf("Digite um valor de referencia inteiro: ");
+    scanf("%d", &valorReferencia);
+
+
+    printf("Numeros maiores que %d:\n", valorReferencia);
+    for (int i = 0; i < 10; i++) {
+        if (numeros[i] > valorReferencia) {
+            printf("%d ", numeros[i]);
+        }
+        if (numeros[i] == valorReferencia) {
+            vezesValorReferencia++;
+        }
+    }
+
+    
+    printf("\nQuantidade de vezes que %d aparece no vetor: %d\n", valorReferencia, vezesValorReferencia);
+
+    return 0;
+}
