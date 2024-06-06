@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+int main() {
+    int quantidadePessoas, idade;
+    int jovem = 0, adulto = 0, idoso = 0;
+
+  
+    printf("Digite a quantidade de pessoas a serem entrevistadas: ");
+    scanf("%d", &quantidadePessoas);
+
+  
+    for (int i = 0; i < quantidadePessoas; i++) {
+        printf("Digite a idade da pessoa %d: ", i + 1);
+        scanf("%d", &idade);
+
+        if (idade >= 18 && idade < 35) {
+            jovem++;
+        } else if (idade >= 35 && idade < 65) {
+            adulto++;
+        } else if (idade >= 65 && idade <= 80) {
+            idoso++;
+        }
+    }
+
+
+    printf("Quantidade de pessoas entrevistadas:\n");
+    printf("Jovens (>= 18 e < 35 anos): %d\n", jovem);
+    printf("Adultos (>= 35 e < 65 anos): %d\n", adulto);
+    printf("Idosos (>= 65 e <= 80 anos): %d\n", idoso);
+
+    return 0;
+}
